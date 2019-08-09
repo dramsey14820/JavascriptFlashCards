@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>English/Norsk JS with Title</title>
+	<!-- <link rel="stylesheet" href="styles/reset.min.css"> -->
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+<div class="flip-container" id="flashcard">
+		<div style="display:none;" id="current-card-id" ></div>
+	<div class="flipper">
+		<div class="front">
+			<div id="flashcard--title_en"class="front-title">title front </div>
+			<br/>
+			<div id="flashcard--content_en">content front</div>
+		</div>
+		<div class="back">
+			<div id="flashcard--title_no" class="back-title">title back</div>
+			<br/>
+			<div id="flashcard--content_no">content back</div>
+		</div>
+	</div>
+</div>
+<div class="button-container">
+	<button class="refresh rating-button">0</button>
+	<button class="refresh rating-button">1</button>
+	<button class="refresh rating-button">2</button>
+	<button class="refresh rating-button">3</button>
+	<button class="refresh rating-button">4</button>
+	<button class="refresh rating-button">5</button>
+</div>
+
+<div>
+	<button id="downloadButton" onclick='downloadData();'>Download Data Set</button>
+	<a id="downloadAnchorElem" style="display:none"></a>
+</div>
+
+<div>
+	<button id="downloadBaseCardsButton" onclick='getBaseCards();'>Get Base Data Set</button>
+	<!-- <a id="downloadBaseCardAnchorElem" style="display:none"></a> -->
+</div>
+
+<div>
+	<input type="file" id="selectFiles" value="Import" /><br />
+	<input type="checkbox" id="importReverseOfCard" checked="checked" value="reversed"><font size="4">Import Reversed Cards.</font></input><br />
+	<button id="import">Import</button>
+	
+	<textarea id="result"></textarea>
+
+	<br />
+	<br />
+	<br />
+	<br />
+	
+</div>
+  <script src='scripts/jquery.min.js'></script>
+  <script  src="scripts/script.js"></script>
+</body>
+
+</html>
